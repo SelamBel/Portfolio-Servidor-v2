@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif, Helvetica;
+    background-color: rgb(248, 248, 248);
+      --primary: #0a0a0a;
+      --accent: #ed1838;
+      --accent-hover: #be142e;
+      --text-light: #ffffff;
+      --text-muted: #999;
+      --bg-dark: #000;
+      --bg-section: #0a0a0a;
+
+}
+
+main {
+    padding-top: 30px ;
+    min-height: 0;
+	height: auto;
+    width: 65%;
+    margin:  auto;
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 50px;
+
+}
+
+/* Estilos para INDEX */
+
+#indexMain svg {
+    width: 350px;
+    height: auto;
+    margin: auto;
+    display: block;
+    transition: all 0.15s ease;
+}
+
+#indexMain svg:hover {
+  transform: scale(1.05);
+  transition: all 0.15s ease;
+}
+#indexMain > * {
+    text-align: center;
+}
+
+
+
+/* FIN DE INDEX */
+
+
+
+
+/* Estilos para CONTACTO */
+
+#imgContacto {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-right: 10%;
+}
+
+
+#divInfoContacto {
+    display: flex;
+    align-items: center;      
+    justify-content: center;         
+    
+}
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 0;
+    height: 1px;
+    background-color: rgb(77, 77, 77);
+}
+
+#divFormularioContacto {
+    margin: auto;
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+
+
+#divFormularioContacto > form {
+    margin-top: 50px;
+    width: 90%;
+    display: grid;
+    vertical-align: top;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(211, 211, 211);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#divFormularioContacto > p {
+    text-align: center;
+}
+
+#divFormularioContacto > form > * {
+    margin: 0px;
+    min-height: 2em;
+    border-radius: 1px;
+    padding: 5px;
+}
+
+#divFormularioContacto > form > input, #divFormularioContacto > form > textarea  {
+    padding-left: 10px;
+    border: 1px solid rgb(211, 211, 211);
+}
+
+#divFormularioContacto > form > *:nth-child(odd) {
+    margin-top: 30px;
+}
+
+#divFormularioContacto > form > button{
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* FIN DE CONTACTO */
+
+/* Estilos para PROYECTOS */
+
+div#searchBar {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+div#searchBar * {
+    margin: 0;
+}
+
+div#searchBar input {
+    width: 77%;
+    padding: 5px;
+    padding-left: 10px;
+    border: 1px solid var(--text-muted);
+    border-radius: 5px;
+}
+
+div#searchBar button {
+    width: 20%;
+    background-color: var(--accent);
+    color: white;
+    padding: 5px;
+    border: 1px solid var(--text-muted);
+    border-radius: 5px;
+}
+
+div#projectsContainer {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+div.projectContainer {
+    width: 31%;
+    border: 1px solid var(--text-muted);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.projectContainer img {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.projectContainer h3 {
+    margin-top: 0px;
+
+}
+
+div.padding {
+    padding: 20px;
+}
+
+div.stats p{
+    display: inline-flex;
+    align-items: center;   
+    justify-content: center; 
+    height: 100px;
+    color: white;
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+div.stats p:nth-child(1) {
+    background-color: green;
+}
+div.stats p:nth-child(2) {
+    background-color: #00becc;
+}
+
+
+
+/* FIN DE PROYECTOS */
