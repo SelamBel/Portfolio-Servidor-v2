@@ -3,22 +3,22 @@ body {
     padding: 0;
     font-family: Arial, sans-serif, Helvetica;
     background-color: rgb(248, 248, 248);
-      --primary: #0a0a0a;
-      --accent: #ed1838;
-      --accent-hover: #be142e;
-      --text-light: #ffffff;
-      --text-muted: #999;
-      --bg-dark: #000;
-      --bg-section: #0a0a0a;
+    --primary: #0a0a0a;
+    --accent: #ed1838;
+    --accent-hover: #be142e;
+    --text-light: #ffffff;
+    --text-muted: #999;
+    --bg-dark: #000;
+    --bg-section: #0a0a0a;
 
 }
 
 main {
-    padding-top: 30px ;
+    padding-top: 30px;
     min-height: 0;
-	height: auto;
+    height: auto;
     width: 65%;
-    margin:  auto;
+    margin: auto;
     position: relative;
     margin-top: 80px;
     margin-bottom: 50px;
@@ -27,7 +27,7 @@ main {
 
 /* Estilos para INDEX */
 
-#indexMain svg {
+#indexMain .logo-svg {
     width: 350px;
     height: auto;
     margin: auto;
@@ -35,11 +35,12 @@ main {
     transition: all 0.15s ease;
 }
 
-#indexMain svg:hover {
-  transform: scale(1.05);
-  transition: all 0.15s ease;
+#indexMain .logo-svg:hover {
+    transform: scale(1.05);
+    transition: all 0.15s ease;
 }
-#indexMain > * {
+
+#indexMain>* {
     text-align: center;
 }
 
@@ -63,9 +64,9 @@ main {
 
 #divInfoContacto {
     display: flex;
-    align-items: center;      
-    justify-content: center;         
-    
+    align-items: center;
+    justify-content: center;
+
 }
 
 hr {
@@ -84,7 +85,7 @@ hr {
 
 
 
-#divFormularioContacto > form {
+#divFormularioContacto>form {
     margin-top: 50px;
     width: 90%;
     display: grid;
@@ -95,27 +96,28 @@ hr {
     border-radius: 10px;
 }
 
-#divFormularioContacto > p {
+#divFormularioContacto>p {
     text-align: center;
 }
 
-#divFormularioContacto > form > * {
+#divFormularioContacto>form>* {
     margin: 0px;
     min-height: 2em;
     border-radius: 1px;
     padding: 5px;
 }
 
-#divFormularioContacto > form > input, #divFormularioContacto > form > textarea  {
+#divFormularioContacto>form>input,
+#divFormularioContacto>form>textarea {
     padding-left: 10px;
     border: 1px solid rgb(211, 211, 211);
 }
 
-#divFormularioContacto > form > *:nth-child(odd) {
+#divFormularioContacto>form>*:nth-child(odd) {
     margin-top: 30px;
 }
 
-#divFormularioContacto > form > button{
+#divFormularioContacto>form>button {
     background-color: var(--accent);
     color: white;
     border: none;
@@ -137,10 +139,14 @@ div#searchBar * {
     margin: 0;
 }
 
+#searchForm {
+    display: flex;
+    gap: 5px;
+}
+
 div#searchBar input {
-    width: 77%;
+    width: 100%;
     padding: 5px;
-    padding-left: 10px;
     border: 1px solid var(--text-muted);
     border-radius: 5px;
 }
@@ -155,19 +161,17 @@ div#searchBar button {
 }
 
 div#projectsContainer {
-    overflow: auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: flex-start;
+    gap: 20px;
+    box-sizing: border-box;
 }
 
 div.projectContainer {
-    width: 31%;
+    width: 100%;
     border: 1px solid var(--text-muted);
     border-radius: 10px;
-    margin-bottom: 20px;
-    margin-right: 1%;
-    margin-left: 1%;
 }
 
 .projectContainer img {
@@ -179,17 +183,16 @@ div.projectContainer {
 
 .projectContainer h3 {
     margin-top: 0px;
-
 }
 
 div.padding {
     padding: 20px;
 }
 
-div.stats p{
+div.stats p {
     display: inline-flex;
-    align-items: center;   
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     height: 100px;
     color: white;
     width: 30%;
@@ -204,6 +207,7 @@ div.stats p{
 div.stats p:nth-child(1) {
     background-color: green;
 }
+
 div.stats p:nth-child(2) {
     background-color: #00becc;
 }
@@ -211,3 +215,17 @@ div.stats p:nth-child(2) {
 
 
 /* FIN DE PROYECTOS */
+
+@media (max-width: 1450px) and (min-width: 800px) {
+    div#projectsContainer {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 799px) {
+    div#projectsContainer {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}

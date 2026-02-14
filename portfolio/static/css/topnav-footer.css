@@ -43,7 +43,7 @@ footer {
 nav {
   position: fixed;
   width: 100%;
-  padding: 20px 50px;
+  padding: 20px 0px;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
@@ -91,11 +91,8 @@ footer .logo-svg {
 
 nav .logo-text,
 footer .logo-text {
+  color: #ed1838;
   font-size: 28px;
-  background: linear-gradient(135deg, #fff, var(--accent));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 nav .nav-links,
@@ -266,9 +263,13 @@ footer .footer-content {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 60px;
   margin-bottom: 60px;
+}
+
+div.footer-column:nth-child(2) {
+  text-align: center;
 }
 
 div.footer-column:nth-child(3) {
@@ -276,12 +277,9 @@ div.footer-column:nth-child(3) {
 }
 
 footer .footer-brand h3 {
+  color: #ed1838;
   font-size: 32px;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #fff, var(--accent));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 footer .footer-brand p {
@@ -328,6 +326,14 @@ footer .footer-column h4 {
 
 footer .footer-column ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+footer .footer-column ul li {
+  width: fit-content;
+  text-align: right;
 }
 
 footer .footer-column a {
@@ -362,8 +368,6 @@ footer .footer-bottom p {
   color: var(--text-muted);
   font-size: 14px;
 }
-
-/* Media Querys */
 
 @media (max-width: 1450px) and (min-width: 769px) {
   nav {
@@ -471,6 +475,10 @@ ol {
   list-style: none;
 }
 
+.toggle {
+  cursor: default;
+}
+
 .nav-links {
   overflow: visible;
 }
@@ -517,7 +525,7 @@ a {
 /* Redes sociales footer */
 
 a.network {
-  text-align: left;
+  text-align: center;
   display: contents !important; 
 
 }
@@ -526,8 +534,10 @@ a.network img {
   width: 50px;
   background-color: var(--text-muted);
   margin-right: 10px;
+  margin-left: 10px;
   transition: all 0.15s ease;
   border-radius: 50%;
+  padding: 5px;
 }
 
 a.network img:hover {
