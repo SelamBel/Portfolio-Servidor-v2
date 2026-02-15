@@ -1,4 +1,5 @@
 <?php
+session_start();
 $visitas =  $_COOKIE['visitas'] ?? "0";
 $visitas += 1;
 setcookie('visitas', $visitas, time() + 3600);
