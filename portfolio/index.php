@@ -1,5 +1,11 @@
+<?php
+$visitas =  $_COOKIE['visitas'] ?? "0";
+$visitas += 1;
+setcookie('visitas', $visitas, time() + 3600);
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +16,7 @@
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 
+
 <body>
     <?php require_once 'templates/nav.php'; ?>
 
@@ -18,6 +25,7 @@
             <img class="logo-svg" src="./static/logo/Logo Finished.svg">
             <h1>Bienvenido a mi Portfolio</h1>
             <p>Explora mis proyectos y trabajos destacados.</p>
+            <p>Has visitado un total de <?php echo $visitas ?> veces.</p>
         </div>
     </main>
 
