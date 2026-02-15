@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,13 +31,9 @@
         <div id="divFormularioContacto">
             <p>Formulario para contactar (No se enviará realmente, solo es para practicar).</p>
             <form>
-                <label for="Nombre">Nombre *</label>
                 <input type="text" id="Nombre" name="Nombre" required placeholder="Tu nombre">
-                <label for="correo">Correo electrónico *</label>
-                <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
-                <label for="Asunto">Asunto *</label>
-                <input type="text" id="Asunto" name="Asunto" required placeholder="Motivo del mensaje">
-                <label for="Mensaje">Mensaje *</label>
+                <input type="email" id="correo" name="correo" required placeholder="Tu correo">
+                <input type="text" id="Asunto" name="Asunto" required placeholder="Asunto">
                 <textarea id="Mensaje" name="Mensaje" required placeholder="Escribe tu mensaje aquí..."></textarea>
                 <button type="submit">Enviar</button>
             </form>
