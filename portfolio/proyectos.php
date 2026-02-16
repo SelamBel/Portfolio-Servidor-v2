@@ -33,13 +33,11 @@ if (empty($proyectosBD)) {
     <main>
         <div id="divProyectos">
             <h1><?php echo $titulo ?></h1>
-            <div id="searchBar">
-                <form id="searchForm" method="GET" action="proyectos.php">
-                    <input type="text" id="searchInput" name="filter" placeholder="Buscar en nombre o descripcion...">
-                    <?php echo isset($_GET['cat']) ? '<input type="hidden" name="cat" value="' . htmlspecialchars($_GET['cat']) . '">' : ''; ?>
-                    <button id="searchButton">Filtrar</button>
-                </form>
-            </div>
+            <form id="searchForm" method="GET" action="proyectos.php">
+                <input type="text" id="searchInput" name="filter" placeholder="Buscar en nombre o descripcion...">
+                <?php echo isset($_GET['cat']) ? '<input type="hidden" name="cat" value="' . htmlspecialchars($_GET['cat']) . '">' : ''; ?>
+                <button id="searchButton">Filtrar</button>
+            </form>
             <div id="projectsContainer">
                 <?php
 
@@ -55,9 +53,9 @@ if (empty($proyectosBD)) {
 
                 $i = 1;
                 foreach ($proyectosElegidos as $proyecto) {
-                    echo "<div class='projectContainer'>";
+                    echo '<div class="projectContainer">';
                     echo '<img src="' . $proyecto['imagen'] . '" alt="Imagen del Proyecto ' . $i++ . '">';
-                    echo '<div class="padding">';
+                    echo '<div class="projectText">';
                     echo '<h3>' . $proyecto['titulo'] . '</h3>';
                     echo '<p>' . $proyecto['descripcion'] . '</p>';
                     echo '<p><strong>Categoria:</strong> ' . $proyecto['categoria'] . '</p>';

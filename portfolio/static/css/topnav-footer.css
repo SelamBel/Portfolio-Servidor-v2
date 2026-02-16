@@ -1,8 +1,9 @@
 @charset "utf-8";
 
 #navbar {
-	overflow: visible;
+  overflow: visible;
 }
+
 nav *,
 footer * {
   margin: 0;
@@ -154,6 +155,90 @@ footer .nav-links a.active::after {
   background: var(--accent);
 }
 
+/* Desplegable ul */
+ul,
+ol {
+  list-style: none;
+}
+
+.toggle {
+  cursor: default;
+}
+
+.nav-links {
+  overflow: visible;
+}
+
+.nav-links>li {
+  float: left;
+  width: fit-content;
+  position: relative;
+}
+
+.nav-links li a {
+  display: block;
+}
+
+.nav-links li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.nav-links li:hover>ul {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.nav-links li:hover ul li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.nav-links li:hover>a:hover {
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 999;
+}
+
+a {
+  text-align: center;
+}
+
+nav .nav-links a#nav-Login-Btn,
+nav .nav-links a#nav-Logout-Btn,
+nav .nav-links a#nav-Admin-Btn {
+  opacity: 1;
+}
+
+nav .nav-links a#nav-Login-Btn::before,
+nav .nav-links a#nav-Logout-Btn::before,
+nav .nav-links a#nav-Admin-Btn::before {
+  opacity: 1;
+}
+
+nav .nav-links a#nav-Admin-Btn::before {
+  background: rgb(105, 155, 29);
+}
+
+nav .nav-links a#nav-Login-Btn::before {
+  background: rgb(29, 115, 155);
+}
+
+nav .nav-links a#nav-Admin-Btn:hover::before {
+  background: rgb(71, 105, 20);
+}
+
+nav .nav-links a#nav-Login-Btn:hover::before {
+  background: rgb(19, 76, 102);
+}
+
+
+
+
 /* Footer */
 footer {
   background: #000;
@@ -287,59 +372,6 @@ footer .footer-bottom p {
   }
 }
 
-/* Desplegable ul */
-ul,
-ol {
-  list-style: none;
-}
-
-.toggle {
-  cursor: default;
-}
-
-.nav-links {
-  overflow: visible;
-}
-
-.nav-links > li {
-  float: left;
-  width: fit-content;
-  position: relative;
-}
-
-.nav-links li a {
-  display: block;
-}
-
-.nav-links li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-}
-
-.nav-links li:hover > ul {
-  display: block;
-  background-color: rgba(0, 0, 0, 0.95);
-  padding: 10px;
-  padding-top: 20px;
-}
-
-.nav-links li:hover ul li {
-	padding-top: 15px;
-	padding-bottom: 15px;
-}
-
-.nav-links li:hover > a:hover {
-  background-color: rgba(0, 0, 0, 0);
-  z-index: 999;
-}
-
-a {
-	text-align: center;
-}
-
 /* Redes sociales footer */
 
 a.network {
@@ -385,7 +417,9 @@ a.network img:hover {
 }
 
 @media (max-width: 799px) {
-nav .nav-links, footer .nav-links {
-  gap: 10px;
-}
+
+  nav .nav-links,
+  footer .nav-links {
+    gap: 10px;
+  }
 }
