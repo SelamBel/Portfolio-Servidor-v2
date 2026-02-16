@@ -27,38 +27,22 @@ session_start();
                 </form>
             </div>
             <div id="projectsContainer">
-                <?php require_once 'datos.php'; ?>
+                <?php
+                require_once 'datos.php';
+                require_once 'procesamientoDatos.php';
+                ?>
                 <?php
                 $i = 1;
-                $proyectosElegidos = [];
-                
+                $proyectosElegidos = $proyectos;
+
                 if (isset($_GET["cat"])) {
                     $categoria = $_GET["cat"];
-                    foreach ($proyectos as $proyecto) {
-                        if ($proyecto['categoria'] === $categoria) {
-                            $proyectosElegidos[] = $proyecto;
-                        }
-                    }
-                } 
+                    $proyectosElegidos = getByCategory($proyectosElegidos, $categoria);
+                }
 
                 if (isset($_GET["filter"])) {
                     $filtro = strtolower($_GET["filter"]);
-                    $proyectosFiltrados = [];
-
-                    if (empty($proyectosElegidos)) {
-                        $proyectosElegidos = $proyectos;
-                    }
-
-                    foreach ($proyectosElegidos as $proyecto) {
-                        if (strpos(strtolower($proyecto['titulo']), $filtro) !== false || strpos(strtolower($proyecto['descripcion']), $filtro) !== false) {
-                            $proyectosFiltrados[] = $proyecto;
-                        }
-                    }
-                    $proyectosElegidos = $proyectosFiltrados;
-                }
-
-                if (!isset($_GET["cat"]) && !isset($_GET["filter"])) {
-                    $proyectosElegidos = $proyectos;
+                    $proyectosElegidos = getByFilter($proyectosElegidos, $filtro);
                 }
 
                 foreach ($proyectosElegidos as $proyecto) {
