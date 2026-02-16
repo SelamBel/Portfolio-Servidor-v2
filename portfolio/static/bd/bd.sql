@@ -76,7 +76,8 @@ INSERT INTO proyectos (titulo, descripcion, categoria_id, imagen) VALUES
 ('Sistema de Reservas', 'Aplicación para gestionar reservas en línea con panel de administración.', 2, 'proyecto5.png'),
 ('Red Social de Mascotas', 'Plataforma social para amantes de mascotas con chat y muro de publicaciones.', 3, 'proyecto6.png'),
 ('Calculadora Online', 'Calculadora interactiva en navegador con diseño responsive.', 1, 'proyecto7.png'),
-('Gestor de Tareas', 'Aplicación para crear, editar y eliminar tareas con almacenamiento en base de datos.', 3, 'proyecto8.png');
+('Gestor de Tareas', 'Aplicación para crear, editar y eliminar tareas con almacenamiento en base de datos.', 3, 'proyecto8.png'),
+('PRUEBA BBDD', 'DESCRIPCIÓN', 3, 'proyecto1.png');
 
 -- ============================
 -- 7. Relación proyectos - tecnologias
@@ -124,3 +125,6 @@ INSERT INTO proyecto_tecnologia VALUES
 -- Proyecto 8: Gestor de Tareas
 INSERT INTO proyecto_tecnologia VALUES
 (8, 4); -- PHP
+
+INSERT INTO proyecto_tecnologia VALUES
+(9, 1);

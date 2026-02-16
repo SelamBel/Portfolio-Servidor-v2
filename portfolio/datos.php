@@ -1,14 +1,7 @@
 <?php
    $categorias = ['Frontend', 'Backend', 'Fullstack'];
 
-   $proyectos = [
-    [
-        'titulo' => 'Portfolio Personal',
-        'descripcion' => 'Web personal para mostrar mis trabajos y habilidades. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'categoria' => 'Frontend',
-        'tecnologias' => ['HTML', 'CSS', 'Bootstrap'],
-        'imagen' => 'static/img/img/proyecto1.png'
-    ],
+   $proyectosLocal = [
     [
         'titulo' => 'Portfolio Personal',
         'descripcion' => 'Web personal para mostrar mis trabajos y habilidades.',
