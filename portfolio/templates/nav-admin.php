@@ -24,8 +24,7 @@ if (isset($_GET['cat'])) {
         </a>
         <ul class="nav-links">
             <li><a href="../index.php" class="nav-link <?php echo $paginaActual == 'index.php' ? 'active' : ''; ?>">Inicio</a></li>
-            <li><a href="../proyectos.php" class="nav-link <?php echo $paginaActual == 'proyectos.php' && $categoriaSeleccionada == null ? 'active' : ''; ?>">Proyectos</a></li>
-            <li><a class="nav-link toggle <?php echo $categoriaSeleccionada !== null ? 'active' : ''; ?>">Categorias</a>
+            <li><a href="../proyectos.php" class="nav-link <?php echo $paginaActual == 'proyectos.php' ? 'active' : ''; ?>">Proyectos</a>
                 <ul>
                     <?php
                     foreach ($categorias as $categoria) {

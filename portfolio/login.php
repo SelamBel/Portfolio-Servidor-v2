@@ -14,6 +14,11 @@ if (isset($_POST["login"])) {
         $_SESSION["rol"] = "ADMIN";
         header("Location: index.php");
         exit();
+    } else if ($username == "user" && $password == "1234") {
+        $_SESSION["username"] = $username;
+        $_SESSION["rol"] = "USER";
+        header("Location: index.php");
+        exit();
     } else {
         $error = "Credenciales incorrectas";
     }
