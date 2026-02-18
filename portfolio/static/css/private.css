@@ -1,0 +1,51 @@
+@import url(style.css);
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.botonesFiltro,
+.botonesFiltroIzq,
+.botonesFiltroDer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.botonesFiltro {
+    justify-content: space-between;
+}
+
+select {
+    height: max-content;
+    padding: 7px;
+    min-width: 100px;
+    text-align: center;
+}
+
+table {
+    text-align: left;
+    border-spacing: 0;
+}
+
+th,
+tr {
+    padding: 15px;
+    font-size: 0.8rem;
+}
+
+th {
+    background-color: var(--bg-section);
+    color: white;
+}
+
+#newProyect {
+    background-color: var(--green);
+}
+
+#exportCSV {
+
+    background-color: var(--blue);
+}

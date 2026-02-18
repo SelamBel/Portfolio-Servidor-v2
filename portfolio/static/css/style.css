@@ -10,7 +10,8 @@ body {
     --text-muted: #999;
     --bg-dark: #000;
     --bg-section: #0a0a0a;
-
+    --blue:  rgb(29, 115, 155);
+    --green: rgb(105, 155, 29);
 }
 
 main {
