@@ -26,8 +26,11 @@ if (empty($categorias)) {
     $categorias = ["Backend", "Frontend", "Fullstack"];
 }
 
-$categoriaSeleccionada = $_GET["catSeleccionada"] ?? "";
-$categoriaFiltroPanel = $categoriaSeleccionada;
+$categoriaFiltroPanel = $_GET["catSeleccionada"] ?? "";
+
+if (!empty($categoriaFiltroPanel) && $categoriaFiltroPanel !== "TODAS") {
+    $proyectosElegidos = getByCategory($proyectosElegidos, $categoriaFiltroPanel);
+}
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +69,7 @@ $categoriaFiltroPanel = $categoriaSeleccionada;
                         <div class="botonesFiltroDer">
                             <button id="exportCSV" name="exportCSV"><i class="fa fa-file"></i> Exportar CSV</button>
                             <button id="newProyect" name="newProyect"><i class="fa fa-plus"></i> Nuevo Proyecto</button>
-                            
+
                         </div>
                     </div>
                 </form>
@@ -98,13 +101,6 @@ $categoriaFiltroPanel = $categoriaSeleccionada;
                 ?>
             </table>
         </div>
-
-        <?php
-        echo '<pre>DEBUG get:';
-        print_r($_GET);
-        echo "<br>";
-        echo '</pre>';
-        ?>
     </main>
     <?php require_once '../templates/footer-admin.php'; ?>
 </body>
