@@ -16,7 +16,7 @@
             <ul>
                 <?php
                 foreach ($categorias as $categoria) {
-                    echo  "<li><a href='proyectos.php?cat=" . $categoria . "' class='nav-link " . "'>" . $categoria . "</a>";
+                    echo  "<li><a href='../proyectos.php?cat=" . $categoria . "' class='nav-link " . "'>" . $categoria . "</a>";
                 }
                 echo "</li>";
                 ?>

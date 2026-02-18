@@ -31,7 +31,7 @@ table {
 }
 
 th,
-tr {
+td {
     padding: 15px;
     font-size: 0.8rem;
 }
@@ -48,4 +48,16 @@ th {
 #exportCSV {
 
     background-color: var(--blue);
+}
+
+.actionBtnDiv {
+    display: flex;
+    gap: 10px;
+}
+.btnEditProyect {
+    background-color: var(--blue);
+}
+
+.btnEditProyect:hover {
+  background: rgb(19, 76, 102);
 }

@@ -1,10 +1,12 @@
 <?php
 
-define('DB_HOST', 'localhost');
+// Cambiar a "db" en casa, "localhost" en clase
+define('DB_HOST', 'db');
 define('DB_NAME', 'portfolio');
 define('DB_PORT', 3306);
 define('DB_USER', 'root');
-define('DB_PASS', '');
+// Cambiar a "root" en casa, vacio en clase
+define('DB_PASS', 'root');
 define('DB_CHARSET', 'utf8mb4');
 
 function conectarBD() {

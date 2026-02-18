@@ -14,6 +14,10 @@ body {
     --green: rgb(105, 155, 29);
 }
 
+*  {
+    box-sizing: border-box;
+}
+
 main {
     padding-top: 30px;
     min-height: 45vh;
@@ -35,6 +39,13 @@ button {
     transition: background-color 0.15s ease;
 }
 
+label, button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
 button:hover {
     background-color: var(--accent-hover);
 }
@@ -44,7 +55,6 @@ input {
     padding: 12px;
     border: 1px solid var(--text-muted);
     border-radius: 5px;
-    box-sizing: border-box;
 }
 
 /* Estilos para INDEX */
@@ -106,8 +116,7 @@ hr {
 }
 
 form {
-    margin-top: 50px;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -160,7 +169,6 @@ div#searchBar * {
     flex-direction: row;
     gap: 5px;
     width: 100%;
-    box-sizing: border-box;
 }
 
 #searchForm button {
@@ -172,7 +180,6 @@ div#projectsContainer {
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: flex-start;
     gap: 20px;
-    box-sizing: border-box;
 }
 
 div.projectContainer {
@@ -253,6 +260,16 @@ div.stats p:nth-child(2) {
 #loginForm #cancel {
     background-color: red;
     color: white;
+}
+
+#loginButtons {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#loginButtons button {
+    width: 100%;
 }
 
 /* LOGIN FIN */
