@@ -29,7 +29,7 @@ main {
     margin-bottom: 50px;
 }
 
-button {
+button, .button {
     background-color: var(--accent);
     color: white;
     border: none;
@@ -37,6 +37,12 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.15s ease;
+    display: flex;
+    gap: 5px;
+}
+
+a {
+    text-decoration: none;
 }
 
 label, button {

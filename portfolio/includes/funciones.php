@@ -42,6 +42,7 @@ function getProyectosBD($conexion)
         $proyectos = [];
         foreach ($resultados as $row) {
             $proyectos[] = [
+                'id' => $row['id'],
                 'titulo' => $row['titulo'],
                 'descripcion' => $row['descripcion'],
                 'categoria' => $row['categoria'],

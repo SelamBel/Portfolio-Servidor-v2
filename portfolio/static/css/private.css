@@ -1,20 +1,27 @@
 @import url(style.css);
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .panel {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.botonesFiltro,
-.botonesFiltroIzq,
-.botonesFiltroDer {
+.row {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
-.botonesFiltro {
+.panelBotones {
+    gap: 20%;
+}
+.panelBotones, form {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 

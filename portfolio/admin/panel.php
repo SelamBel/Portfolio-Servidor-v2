@@ -58,48 +58,47 @@ if (!empty($categoriaFiltroPanel) && $categoriaFiltroPanel !== "TODAS") {
             <h1>Administración de proyectos (Admin) (<?php echo $titulo ?>)</h1>
             <div class="panelBotones">
                 <form method="get" action="panel.php">
-                    <div class="botonesFiltro">
-                        <div class="botonesFiltroIzq">
-                            <label for="cat">
-                                Filtrar por categoria:
-                                <?php echo generarSelect($categorias, $categoriaFiltroPanel); ?>
-                            </label>
-                            <button id="filter">Filtrar</button>
-                        </div>
-                        <div class="botonesFiltroDer">
-                            <button id="exportCSV" name="exportCSV"><i class="fa fa-file"></i> Exportar CSV</button>
-                            <button id="newProyect" name="newProyect"><i class="fa fa-plus"></i> Nuevo Proyecto</button>
-
-                        </div>
+                    <div class="row">
+                        <label for="cat">
+                            Filtrar por categoria:
+                            <?php echo generarSelect($categorias, $categoriaFiltroPanel); ?>
+                        </label>
+                        <button id="filter">Filtrar</button>
+                    </div>
+                    <div class="row">
+                        <a class="button" id="exportCSV" href="exportar_proyectos.php"><i class="fa fa-file"></i> Exportar CSV</a>
+                        <a class="button" id="newProyect" href="proyecto_nuevo.php"><i class="fa fa-plus"></i> Nuevo Proyecto</a>
                     </div>
                 </form>
             </div>
-            <table>
-                <tr>
-                    <th>Titulo</th>
-                    <th>Descripcion</th>
-                    <th>Categoria</th>
-                    <th>Tecnologías</th>
-                    <th>Acciones</th>
-                </tr>
-                <?php
-                foreach ($proyectosElegidos as $proyecto) {
-                    echo "<tr>";
-                    echo "<td>" . $proyecto["titulo"] . "</td>";
-                    echo "<td>" . $proyecto["descripcion"] . "</td>";
-                    echo "<td>" . $proyecto["categoria"] . "</td>";
-                    $tecnologias = "";
-                    foreach ($proyecto['tecnologias'] as $tecnologia) {
-                        $tecnologias .= $tecnologia . " ";
-                    }
-                    echo "<td>" . $tecnologias . "</td>";
-
-                    echo "<td><div class='actionBtnDiv'><button class='btnEditProyect' name='btnEditProyect'><i class='fa fa-pencil'></i> Editar</button>
-            <button class='btnDeleteProyect' name='btnDeleteProyect'><i class='fa fa-trash'></i> Borrar</button></td>";
-                    echo "</tr>";
+        </div>
+        <table>
+            <tr>
+                <th>Titulo</th>
+                <th>Descripcion</th>
+                <th>Categoria</th>
+                <th>Tecnologías</th>
+                <th>Acciones</th>
+            </tr>
+            <?php
+            foreach ($proyectosElegidos as $proyecto) {
+                echo "<tr>";
+                echo "<td>" . $proyecto["titulo"] . "</td>";
+                echo "<td>" . $proyecto["descripcion"] . "</td>";
+                echo "<td>" . $proyecto["categoria"] . "</td>";
+                $tecnologias = "";
+                foreach ($proyecto['tecnologias'] as $tecnologia) {
+                    $tecnologias .= $tecnologia . " ";
                 }
-                ?>
-            </table>
+                echo "<td>" . $tecnologias . "</td>";
+
+                echo "<td><div class='actionBtnDiv'>";
+                echo "<a class='btnEditProyect button' href='proyecto_editar.php?id=" . $proyecto['id'] . "' ><i class='fa fa-pencil'></i> Editar</a>";
+                echo "<a class='button' href='proyecto_borrar.php?id=" . $proyecto['id'] . "' ><i class='fa fa-trash'></i> Borrar</a>";
+                echo "</div></td></tr>";
+            }
+            ?>
+        </table>
         </div>
     </main>
     <?php require_once '../templates/footer-admin.php'; ?>
