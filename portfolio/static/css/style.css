@@ -56,7 +56,7 @@ button:hover {
     background-color: var(--accent-hover);
 }
 
-input {
+input, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid var(--text-muted);

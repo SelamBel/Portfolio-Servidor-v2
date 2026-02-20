@@ -1,6 +1,12 @@
 <?php
 require_once "../includes/conexion.php";
 require_once "../includes/funciones.php";
+session_start();
+$rol = $_SESSION["rol"] ?? null;
+if ($rol != "ADMIN") {
+    header("Location: ../index.php");
+    exit();
+}
 
 $conexion = conectarBD();
 $proyectos = getProyectosBD($conexion);

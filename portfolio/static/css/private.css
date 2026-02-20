@@ -52,6 +52,28 @@ th {
     background-color: var(--green);
 }
 
+#newProyectForm {
+    flex-direction: column;
+}
+#newProyectForm h1{
+    text-align: center;
+    margin: 0;
+}
+
+#newProyectForm label {
+    flex-direction: column;
+    align-items: start;
+}
+
+#newProyectForm select {
+    width: 100%;
+    border-radius: 5px;
+}
+#newDesc{
+    resize: none;
+    height: 3rem;
+}
+
 #exportCSV {
 
     background-color: var(--blue);

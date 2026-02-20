@@ -52,6 +52,12 @@ if (!empty($categoriaFiltroPanel) && $categoriaFiltroPanel !== "TODAS") {
 <body>
     <?php require_once '../templates/nav-admin.php'; ?>
 
+    <?php if (!empty($_GET['error'])): ?>
+        <script>
+            alert("<?php echo addslashes(htmlspecialchars($_GET['error'])); ?>");
+        </script>
+    <?php endif; ?>
+
     <main>
 
         <div class="panel">
