@@ -67,7 +67,7 @@ if (empty($tecnologias)) $tecnologias = ["HTML", "CSS", "Bootstrap", "PHP", "MyS
             <h1>Nuevo proyecto</h1>
             <label for="newTitulo">Titulo: <input type="text" id="newTitulo" name="titulo" required></label>
             <label for="newDesc">Descripción: <textarea id="newDesc" name="descripcion" required></textarea></label>
-            <label for="categoria">Categoria: <?php echo generarSelect($categorias, "", false, "categoria") ?></label>
+            <label for="categoria">Categoria: <?php echo generarSelect($categorias, "", false) ?></label>
             <label for="tecnologias">Tecnologías: <?php echo generarMultiSelect($tecnologias); ?></label>
             <label for="imagen">Imagen: <input type="file" id="imagen" name="imagen"></label>
             <button type="submit" id="btnCrearNuevoProyecto">Crear Proyecto</button>
