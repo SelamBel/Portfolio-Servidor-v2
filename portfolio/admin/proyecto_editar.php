@@ -55,6 +55,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($ok) {
         if ($tmpImagen !== null) {
+            // Borramos la imágen vieja
+            $imagenAntigua = "../" . $proyecto['imagen'];
+            if (file_exists($imagenAntigua)) {
+                unlink($imagenAntigua);
+            }
+
+            //Metemos la nueva
             move_uploaded_file($tmpImagen, "../static/img/img/" . $nombreImagen);
         }
         header("Location: panel.php");
