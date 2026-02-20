@@ -45,6 +45,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $tmpImagen = null;
     $extensionImagen = null;
 
+    $tiposPermitidos = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+    if (!in_array($_FILES['imagen']['type'], $tiposPermitidos)) {
+        header("Location: panel.php?error=" . urlencode("Solo se permiten imágenes"));
+        exit();
+    }
+
     if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
         $tmpImagen = $_FILES['imagen']['tmp_name'];
         $extensionImagen = pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION);

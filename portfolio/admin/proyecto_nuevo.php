@@ -22,6 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $categoria = $_POST['catSeleccionada'] ?? '';
     $tecnologias = $_POST['tecnologias'] ?? [];
 
+    $tiposPermitidos = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+    if (!in_array($_FILES['imagen']['type'], $tiposPermitidos)) {
+        header("Location: panel.php?error=" . urlencode("Solo se permiten imágenes"));
+        exit();
+    }
+
     $nombreImagen = 'placeholder.png';
     if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
         $extension = pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION);

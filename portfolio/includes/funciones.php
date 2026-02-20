@@ -56,7 +56,6 @@ function getProyectosBD($conexion)
         return $proyectos;
     } catch (PDOException $e) {
         error_log('Error al obtener proyectos: ' . $e->getMessage());
-        var_dump($e->getMessage());
         return [];
     }
 }
