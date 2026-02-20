@@ -5,6 +5,7 @@ main {
     flex-direction: column;
     gap: 20px;
 }
+
 .panel {
     display: flex;
     flex-direction: column;
@@ -19,7 +20,9 @@ main {
 .panelBotones {
     gap: 20%;
 }
-.panelBotones, form {
+
+.panelBotones,
+form {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -55,7 +58,8 @@ th {
 #newProyectForm {
     flex-direction: column;
 }
-#newProyectForm h1{
+
+#newProyectForm h1 {
     text-align: center;
     margin: 0;
 }
@@ -69,7 +73,8 @@ th {
     width: 100%;
     border-radius: 5px;
 }
-#newDesc{
+
+#newDesc {
     resize: none;
     height: 3rem;
 }
@@ -83,12 +88,13 @@ th {
     display: flex;
     gap: 10px;
 }
+
 .btnEditProyect {
     background-color: var(--blue);
 }
 
 .btnEditProyect:hover {
-  background: rgb(19, 76, 102);
+    background: rgb(19, 76, 102);
 }
 
 .divImg {
@@ -101,11 +107,28 @@ th {
     flex: 1;
     text-align: center;
     align-items: center;
-    
+
 }
 
 #newProyectForm .divImg img {
     width: 100%;
     height: auto;
     max-height: 370px;
+}
+
+#confirmDelete button,
+#confirmDelete a {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+#cancelDelete {
+    background-color: rgb(29, 115, 155);
+}
+
+#cancelDelete:hover {
+    background-color: rgb(19, 76, 102);
 }
