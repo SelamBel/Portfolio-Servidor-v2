@@ -98,7 +98,7 @@ if (!empty($categoriaFiltroPanel) && $categoriaFiltroPanel !== "TODAS") {
                 }
                 echo "<td>" . $tecnologias . "</td>";
 
-                echo "<td><div class='actionBtnDiv'>";
+                echo "<td><div class='row'>";
                 echo "<a class='btnEditProyect button' href='proyecto_editar.php?id=" . $proyecto['id'] . "' ><i class='fa fa-pencil'></i> Editar</a>";
                 echo "<a class='button' href='proyecto_borrar.php?id=" . $proyecto['id'] . "' ><i class='fa fa-trash'></i> Borrar</a>";
                 echo "</div></td></tr>";

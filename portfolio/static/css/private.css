@@ -85,11 +85,6 @@ th {
     background-color: var(--blue);
 }
 
-.actionBtnDiv {
-    display: flex;
-    gap: 10px;
-}
-
 .btnEditProyect {
     background-color: var(--blue);
 }
@@ -137,4 +132,40 @@ th {
 
 #cancelDelete:hover {
     background-color: rgb(19, 76, 102);
+}
+
+@media (max-width: 1450px) {
+
+    .panelBotones,
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .row {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    main {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    main {
+        width: 95%;
+    }
 }

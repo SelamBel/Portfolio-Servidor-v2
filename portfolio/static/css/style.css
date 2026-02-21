@@ -45,7 +45,7 @@ a {
     text-decoration: none;
 }
 
-label, button {
+label, button, .button {
     display: flex;
     align-items: center;
     justify-content: center;
