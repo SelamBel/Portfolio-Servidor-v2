@@ -90,7 +90,8 @@ function generarSelect($categorias, $catSeleccionada = "", $añadirTodas = true)
 
 
 function generarMultiSelect($tecnologias, $seleccionadas = [], $name = "tecnologias") {
-    $html = "<select name='{$name}[]' id='{$name}' multiple>\n";
+    $total = count($tecnologias);
+    $html = "<select name='{$name}[]' id='{$name}' multiple size='$total'>\n";
 
     foreach ($tecnologias as $tecnologia) {
         $val = htmlspecialchars($tecnologia);

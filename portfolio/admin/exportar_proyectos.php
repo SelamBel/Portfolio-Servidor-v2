@@ -12,7 +12,7 @@ $conexion = conectarBD();
 $proyectos = getProyectosBD($conexion);
 
 if (empty($proyectos)) {
-    header("Location: panel.php");
+    header("Location: panel.php?error=" . urlencode("No hay proyectos actualmente, o no tienes acceso a la base de datos"));
     exit();
 }
 

@@ -11,12 +11,12 @@ include_once "../includes/funciones.php";
 require_once '../datos.php';
 $conexion = conectarBD();
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if ($conexion === null) {
-        header("Location: panel.php?error=" . urlencode("No se pueden guardar datos en local"));
-        exit();
-    }
+if ($conexion === null) {
+    header("Location: panel.php?error=" . urlencode("No se pueden crear proyectos en local"));
+    exit();
+}
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titulo = $_POST['titulo'] ?? '';
     $descripcion = $_POST['descripcion'] ?? '';
     $categoria = $_POST['catSeleccionada'] ?? '';

@@ -13,7 +13,7 @@ $conexion = conectarBD();
 $id = $_GET["id"] ?? null;
 
 if ($conexion === null) {
-    header("Location: panel.php?error=" . urlencode("No se pueden guardar datos en local"));
+    header("Location: panel.php?error=" . urlencode("No se pueden editar los datos de proyectos en local"));
     exit();
 }
 

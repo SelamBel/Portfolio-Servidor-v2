@@ -29,9 +29,8 @@ form {
 }
 
 select {
-    height: max-content;
+    height: fit-content;
     padding: 7px;
-    min-width: 100px;
     text-align: center;
 }
 
@@ -72,6 +71,8 @@ th {
 #newProyectForm select {
     width: 100%;
     border-radius: 5px;
+    overflow: hidden;
+    font-size: 1rem;
 }
 
 #newDesc {
@@ -114,6 +115,11 @@ th {
     width: 100%;
     height: auto;
     max-height: 370px;
+}
+
+#newProyectForm option:checked {
+    background-color: var(--accent);
+    color: var(--text-light);
 }
 
 #confirmDelete button,
